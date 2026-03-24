@@ -18,7 +18,7 @@ export default function Home() {
           <Navbar />
           <div className="navbar-search-checkout">
             <IoIosSearch size={30} />
-            <div class="vertical-line"></div>
+            <div className="vertical-line"></div>
             <PiShoppingBagOpenLight size={30} />
           </div>
         </div>
