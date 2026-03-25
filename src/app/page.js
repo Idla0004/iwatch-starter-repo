@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import Productheader from "./components/Productheadline";
 import Productcolorselector from "./components/Productcolorselector";
 import Buynowbtn from "./components/Buynowbtn";
+import Arrownavigation from "./components/Arrownavigation";
+import Exploreoptionswrapper from "./components/Exploreoptionswrapper";
 
 export default function Home() {
   return (
@@ -13,13 +15,22 @@ export default function Home() {
       <header>
         <div className="header-bar">
           <div className="navbar-logo">
-            <FaApple size={50} />
+            <FaApple
+              size={50}
+              className="applelogoicon"
+            />
           </div>
           <Navbar />
           <div className="navbar-search-checkout">
-            <IoIosSearch size={30} />
+            <IoIosSearch
+              size={30}
+              className="searchicon"
+            />
             <div className="vertical-line"></div>
-            <PiShoppingBagOpenLight size={30} />
+            <PiShoppingBagOpenLight
+              size={30}
+              className="shoppingbagicon"
+            />
           </div>
         </div>
       </header>
@@ -45,38 +56,9 @@ export default function Home() {
         </section>
         <section>
           <div className="explore-section">
-            <div className="choice-navigation">
-              <a href="/">←</a>
-              <a href="/">1</a>
-              <a href="/">→</a>
-            </div>
+            <Arrownavigation />
             <div>
-              <div className="explore-watch-images">
-                <div className="navy-background">
-                  <Image
-                    src="/navy.png"
-                    width={150}
-                    height={150}
-                    alt="Apple watch in navy color"
-                  />
-                </div>
-                <div className="mint-background">
-                  <Image
-                    src="/mint.png"
-                    width={150}
-                    height={150}
-                    alt="Apple watch in mint color"
-                  />
-                </div>
-                <div className="ocean-background">
-                  <Image
-                    src="/ocean.png"
-                    width={150}
-                    height={150}
-                    alt="Apple watch in ocean pink color"
-                  />
-                </div>
-              </div>
+              <Exploreoptionswrapper />
             </div>
           </div>
         </section>

@@ -41,6 +41,10 @@ body {
   .navbar-logo {
     grid-column: 1;
     place-self: center start;
+
+    svg {
+      cursor: pointer;
+    }
   }
 
   .nav-container {
@@ -57,6 +61,10 @@ body {
       0.7rem + 0.5333vw,
       1.7rem
     );
+
+    li {
+      padding: 0 1rem;
+    }
 
     li:hover {
       background-color: var(--color-foreground);
@@ -81,17 +89,22 @@ body {
   .navbar-search-checkout {
     display: flex;
     gap: 1rem;
-    padding-inline: 1rem;
+    padding: 0 0 0 1rem;
     grid-column: 3;
     place-self: center end;
+
+    .searchicon,
+    .shoppingbagicon {
+      cursor: pointer;
+    }
   }
 }
 
 /* Product view */
 .product-wrapper {
   display: grid;
-  grid-auto-columns: 2fr 1fr;
-  grid-template-areas: "a a a b b c";
+  grid-auto-columns: 2fr auto auto;
+  grid-template-areas: "a a a a b c";
   grid-auto-rows: auto;
   align-items: center;
   padding-block-start: 4rem;
@@ -117,6 +130,7 @@ body {
   .focus-watch-image {
     display: grid;
     grid-area: b;
+    place-self: center;
   }
 }
 
@@ -190,8 +204,8 @@ body {
   );
   padding-inline: clamp(
     1.125rem,
-    0.75rem + 1.5vw,
-    1.875rem
+    1.75rem + 1.5vw,
+    4rem
   );
   border-radius: 99px;
   font-weight: 600;
@@ -199,7 +213,7 @@ body {
   cursor: pointer;
 
   &:hover {
-    border: 2.5px solid var(--foreground);
+    box-shadow: #fffffff0 0px 1px 5px;
   }
 }
 
@@ -226,6 +240,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     position: relative;
     isolation: isolate;
+    place-items: center;
   }
 
   .navy-background {
