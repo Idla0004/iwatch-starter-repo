@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+import { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import { PiShoppingBagOpenLight } from "react-icons/pi";
@@ -8,8 +9,15 @@ import Productcolorselector from "./components/Productcolorselector";
 import Buynowbtn from "./components/Buynowbtn";
 import Arrownavigation from "./components/Arrownavigation";
 import Exploreoptionswrapper from "./components/Exploreoptionswrapper";
+import Focuswatchimage from "./components/Focuswatchimage";
 
 export default function Home() {
+  const [chosenColor, setChosenColor] =
+    useState("navy");
+
+  const handleColorChange = (color) => {
+    setChosenColor(color);
+  };
   return (
     <body>
       <header>
@@ -40,15 +48,12 @@ export default function Home() {
             <div className="headline">
               <Productheader />
             </div>
-            <div className="focus-watch-image">
-              <Image
-                src="/navy.png"
-                width={450}
-                height={450}
-                alt="Apple watch in navy color"
-              />
-            </div>
-            <Productcolorselector />
+            <Focuswatchimage
+              chosenColor={chosenColor}
+            />
+            <Productcolorselector
+              colorChangeClick={handleColorChange}
+            />
           </div>
           <div>
             <Buynowbtn />
@@ -58,7 +63,11 @@ export default function Home() {
           <div className="explore-section">
             <Arrownavigation />
             <div>
-              <Exploreoptionswrapper />
+              <Exploreoptionswrapper
+                colorChangeClick={
+                  handleColorChange
+                }
+              />
             </div>
           </div>
         </section>

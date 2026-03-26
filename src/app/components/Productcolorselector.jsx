@@ -1,13 +1,24 @@
-const Productcolorselector = () => {
+"use client";
+
+const Productcolorselector = ({
+  colorChangeClick,
+}) => {
   return (
     <div className="color-select">
-      <div className="navy">
-        <a href="/"></a>
-      </div>
+      <button
+        className="navy"
+        onClick={() => colorChangeClick("navy")}
+      ></button>
       <div className="circles"></div>
-      <a href="/" className="mint"></a>
+      <button
+        className="mint"
+        onClick={() => colorChangeClick("mint")}
+      ></button>
       <div className="circles"></div>
-      <a href="/" className="ocean"></a>
+      <button
+        className="ocean"
+        onClick={() => colorChangeClick("ocean")}
+      ></button>
     </div>
   );
 };
