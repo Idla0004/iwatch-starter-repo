@@ -241,6 +241,10 @@ body {
     position: relative;
     isolation: isolate;
     place-items: center;
+
+    img {
+      cursor: pointer;
+    }
   }
 
   .navy-background {
