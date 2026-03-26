@@ -225,7 +225,7 @@ body {
   align-items: end;
   padding-block-start: 2rem;
 
-  .choice-navigation a {
+  .choice-navigation {
     font-size: clamp(
       1rem,
       0.8125rem + 0.75vw,

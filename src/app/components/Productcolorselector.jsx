@@ -1,3 +1,8 @@
+/* Kode forklaret til mig selv */
+/* colorChangeClick vælger mellem produkterne ud fra farve
+onClick=>{()=> colorChangeClick("enellerandenfarve")} med billede lytter efter klik 
+på billedet, for at den viser det rigtige billede valgt */
+
 "use client";
 
 const Productcolorselector = ({

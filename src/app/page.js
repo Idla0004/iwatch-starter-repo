@@ -18,8 +18,9 @@ export default function Home() {
   const handleColorChange = (color) => {
     setChosenColor(color);
   };
+
   return (
-    <body>
+    <>
       <header>
         <div className="header-bar">
           <div className="navbar-logo">
@@ -61,7 +62,9 @@ export default function Home() {
         </section>
         <section>
           <div className="explore-section">
-            <Arrownavigation />
+            <Arrownavigation
+              colorChangeClick={handleColorChange}
+            />
             <div>
               <Exploreoptionswrapper
                 colorChangeClick={
@@ -72,6 +75,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </body>
+    </>
   );
 }
