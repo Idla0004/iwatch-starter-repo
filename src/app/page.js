@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
@@ -8,17 +9,12 @@ import Productheader from "./components/Productheadline";
 import Productcolorselector from "./components/Productcolorselector";
 import Buynowbtn from "./components/Buynowbtn";
 import Arrownavigation from "./components/Arrownavigation";
-import Exploreoptionswrapper from "./components/Exploreoptionswrapper";
-import Focuswatchimage from "./components/Focuswatchimage";
+import ThumbnailImages from "./components/ThumbnailImages";
 
 export default function Home() {
-  const [chosenColor, setChosenColor] =
-    useState("navy");
-
-  const handleColorChange = (color) => {
-    setChosenColor(color);
-  };
-
+  const [activeWatchImage, setActiveWatchImage] =
+    useState("/navy.png");
+  // activeImage er en variabel, setActiveImage er en funktion, der kan opdatere min state.
   return (
     <>
       <header>
@@ -49,12 +45,13 @@ export default function Home() {
             <div className="headline">
               <Productheader />
             </div>
-            <Focuswatchimage
-              chosenColor={chosenColor}
+            <Image
+              src={activeWatchImage}
+              alt="Apple iWatch"
+              width={450}
+              height={450}
             />
-            <Productcolorselector
-              colorChangeClick={handleColorChange}
-            />
+            <Productcolorselector />
           </div>
           <div>
             <Buynowbtn />
@@ -62,15 +59,34 @@ export default function Home() {
         </section>
         <section>
           <div className="explore-section">
-            <Arrownavigation
-              colorChangeClick={handleColorChange}
-            />
+            <Arrownavigation />
             <div>
-              <Exploreoptionswrapper
-                colorChangeClick={
-                  handleColorChange
-                }
-              />
+              <div className="explore-watch-images">
+                <div className="navy-background">
+                  <ThumbnailImages
+                    setActiveWatchImage={
+                      setActiveWatchImage
+                    }
+                    img={"/navy.png"}
+                  />
+                </div>
+                <div className="mint-background">
+                  <ThumbnailImages
+                    setActiveWatchImage={
+                      setActiveWatchImage
+                    }
+                    img={"/mint.png"}
+                  />
+                </div>
+                <div className="ocean-background">
+                  <ThumbnailImages
+                    setActiveWatchImage={
+                      setActiveWatchImage
+                    }
+                    img={"/ocean.png"}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
