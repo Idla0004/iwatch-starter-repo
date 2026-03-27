@@ -3,27 +3,41 @@
 onClick=>{()=> colorChangeClick("enellerandenfarve")} med billede lytter efter klik 
 på billedet, for at den viser det rigtige billede valgt */
 
-"use client";
+// "use client";
 
-const Productcolorselector = ({
-  colorChangeClick,
-}) => {
+// const Productcolorselector = ({
+//   colorChangeClick,
+// }) => {
+//   return (
+//     <div className="color-select">
+//       <button
+//         className="navy"
+//         onClick={() => colorChangeClick("navy")}
+//       ></button>
+//       <div className="circles"></div>
+//       <button
+//         className="mint"
+//         onClick={() => colorChangeClick("mint")}
+//       ></button>
+//       <div className="circles"></div>
+//       <button
+//         className="ocean"
+//         onClick={() => colorChangeClick("ocean")}
+//       ></button>
+//     </div>
+//   );
+// };
+
+// export default Productcolorselector;
+
+const Productcolorselector = () => {
   return (
     <div className="color-select">
-      <button
-        className="navy"
-        onClick={() => colorChangeClick("navy")}
-      ></button>
+      <button className="navy"></button>
       <div className="circles"></div>
-      <button
-        className="mint"
-        onClick={() => colorChangeClick("mint")}
-      ></button>
+      <button className="mint"></button>
       <div className="circles"></div>
-      <button
-        className="ocean"
-        onClick={() => colorChangeClick("ocean")}
-      ></button>
+      <button className="ocean"></button>
     </div>
   );
 };

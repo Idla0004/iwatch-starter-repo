@@ -7,54 +7,54 @@
 // I alt bruger jeg ${} for at vise den rigtige farve i billede beskrivelsen ud fra chosenColor.
 
 /* dynamisk/interaktiv*/
-"use client";
-import Image from "next/image";
-
-const Focuswatchimage = ({ chosenColor }) => {
-  let imageSrc;
-
-  if (chosenColor === "navy") {
-    imageSrc = "/navy.png";
-  } else if (chosenColor === "mint") {
-    imageSrc = "/mint.png";
-  } else if (chosenColor === "ocean") {
-    imageSrc = "/ocean.png";
-  } else {
-    // Default billede er navy
-    imageSrc = "/navy.png";
-  }
-
-  return (
-    <div className="focus-watch-image">
-      <Image
-        src={imageSrc}
-        width={450}
-        height={450}
-        alt={`Apple watch in ${chosenColor} color`}
-      />
-    </div>
-  );
-};
-
-export default Focuswatchimage;
-
-/* statisk */
+// "use client";
 // import Image from "next/image";
 
-// const Focuswatchimage = () => {
+// const Focuswatchimage = ({ chosenColor }) => {
+//   let imageSrc;
+
+//   if (chosenColor === "navy") {
+//     imageSrc = "/navy.png";
+//   } else if (chosenColor === "mint") {
+//     imageSrc = "/mint.png";
+//   } else if (chosenColor === "ocean") {
+//     imageSrc = "/ocean.png";
+//   } else {
+//     // Default billede er navy
+//     imageSrc = "/navy.png";
+//   }
+
 //   return (
 //     <div className="focus-watch-image">
 //       <Image
-//         src="/navy.png"
+//         src={imageSrc}
 //         width={450}
 //         height={450}
-//         alt="Apple watch in navy color"
+//         alt={`Apple watch in ${chosenColor} color`}
 //       />
 //     </div>
 //   );
 // };
 
 // export default Focuswatchimage;
+
+/* statisk */
+import Image from "next/image";
+
+const Focuswatchimage = () => {
+  return (
+    <div className="focus-watch-image">
+      <Image
+        src="/navy.png"
+        width={450}
+        height={450}
+        alt="Apple watch in navy color"
+      />
+    </div>
+  );
+};
+
+export default Focuswatchimage;
 
 /* dynamisk med kode fra nettet, har ikke større forståelse for switch og case endnu, så bruger if/else i stedet*/
 // "use client";
