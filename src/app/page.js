@@ -6,7 +6,6 @@ import { IoIosSearch } from "react-icons/io";
 import { PiShoppingBagOpenLight } from "react-icons/pi";
 import Navbar from "./components/Navbar";
 import Productheader from "./components/Productheadline";
-import Productcolorselector from "./components/Productcolorselector";
 import Buynowbtn from "./components/Buynowbtn";
 import Arrownavigation from "./components/Arrownavigation";
 import ThumbnailImages from "./components/ThumbnailImages";
