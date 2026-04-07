@@ -10,11 +10,13 @@ import Productcolorselector from "./components/Productcolorselector";
 import Buynowbtn from "./components/Buynowbtn";
 import Arrownavigation from "./components/Arrownavigation";
 import ThumbnailImages from "./components/ThumbnailImages";
+import Dots from "./components/Dots";
 
 export default function Home() {
   const [activeWatchImage, setActiveWatchImage] =
     useState("/navy.png");
-  // activeImage er en variabel, setActiveImage er en funktion, der kan opdatere min state.
+  // activeImage er en variabel, setActiveImage er en funktion, der kan opdatere min state. /navy.png er default source.
+  // useState returnere et array, kaldes en form for array destrukturering.
   return (
     <>
       <header>
@@ -51,7 +53,39 @@ export default function Home() {
               width={450}
               height={450}
             />
-            <Productcolorselector />
+            <div className="color-select">
+              <Dots
+                color="#58d7c4"
+                relatedImage="/mint.png"
+                activeWatchImage={
+                  activeWatchImage
+                }
+                setActiveWatchImage={
+                  setActiveWatchImage
+                }
+              />
+              <Dots
+                color="#404354"
+                relatedImage="/navy.png"
+                activeWatchImage={
+                  activeWatchImage
+                }
+                setActiveWatchImage={
+                  setActiveWatchImage
+                }
+              />
+              <Dots
+                color="#ddf3fd"
+                relatedImage="/ocean.png"
+                activeWatchImage={
+                  activeWatchImage
+                }
+                setActiveWatchImage={
+                  setActiveWatchImage
+                }
+              />
+            </div>
+            {/* <Productcolorselector /> */}
           </div>
           <div>
             <Buynowbtn />

@@ -134,7 +134,7 @@ body {
   }
 }
 
-.color-select {
+/* .color-select {
   display: grid;
   grid-area: c;
   grid-auto-rows: auto;
@@ -153,45 +153,31 @@ body {
       1.375rem
     );
     margin-block: 1px;
-  }
+  } */
 
-  .navy {
-    width: clamp(24px, 19.5px + 1.125cqi, 33px);
-    height: clamp(24px, 19.5px + 1.125cqi, 33px);
-    border-radius: 99px;
-    background: #404354;
-    border: 3px solid white;
+.color-select {
+  display: grid;
+  grid-area: c;
+  grid-auto-rows: auto;
+  margin-block: 1px;
+  gap: 1rem;
+}
 
-    &:hover {
-      box-shadow: #17171748 0 2px 5px;
-      cursor: pointer;
-    }
-  }
+.dot-selected {
+  width: clamp(24px, 19.5px + 1.125cqi, 33px);
+  height: clamp(24px, 19.5px + 1.125cqi, 33px);
+  border-radius: 99px;
 
-  .mint {
-    width: clamp(24px, 19.5px + 1.125cqi, 33px);
-    height: clamp(24px, 19.5px + 1.125cqi, 33px);
-    border-radius: 99px;
-    background: #58d7c4;
-    border: 3px solid white;
-    &:hover {
-      box-shadow: #17171748 0 2px 5px;
-      cursor: pointer;
-    }
-  }
-
-  .ocean {
-    width: clamp(24px, 19.5px + 1.125cqi, 33px);
-    height: clamp(24px, 19.5px + 1.125cqi, 33px);
-    border-radius: 99px;
-    background: #ddf3fd;
-    border: 3px solid white;
-    &:hover {
-      box-shadow: #17171748 0 2px 5px;
-      cursor: pointer;
-    }
+  &:hover {
+    box-shadow: #17171748 0 2px 5px;
+    cursor: pointer;
   }
 }
+
+.myborder {
+  border: solid 2px white;
+}
+/* en Utilitiy class */
 
 /* Buy now button */
 .buynow-btn {

@@ -8,8 +8,8 @@ const ThumbnailImages = ({
   return (
     <Image
       onClick={() => setActiveWatchImage(img)}
-      // () => skal være der for at være et callback, der definere hvad vi skal gøre. lidt ligesom forEach. En funktion, der ikke har noget navn.
-      // setActiveWatchImage(img) - opdateret statet på img med setActiveImage
+      // () => skal være der for at være et callback, der definerer hvad vi skal gøre. lidt ligesom forEach. En funktion, der ikke har noget navn.
+      // setActiveWatchImage(img) - opdaterer statet på img med setActiveImage
       src={img}
       width={150}
       height={150}
