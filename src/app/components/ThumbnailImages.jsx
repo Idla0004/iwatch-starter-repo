@@ -1,10 +1,7 @@
 "use client";
 import Image from "next/image";
 
-const ThumbnailImages = ({
-  img,
-  setActiveWatchImage,
-}) => {
+const ThumbnailImages = ({ img, setActiveWatchImage }) => {
   return (
     <Image
       onClick={() => setActiveWatchImage(img)}
