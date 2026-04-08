@@ -71,28 +71,28 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <div className="grid auto-rows-auto grid-cols-[1fr_1fr] items-end pbs-8">
-            <Arrownavigation />
-            <div>
-              <div className="relative isolate grid grid-cols-3 items-center">
-                <div className="navy-background cursor-pointer">
-                  <ThumbnailImages
-                    setActiveWatchImage={setActiveWatchImage}
-                    img={"/navy.png"}
-                  />
-                </div>
-                <div className="mint-background cursor-pointer">
-                  <ThumbnailImages
-                    setActiveWatchImage={setActiveWatchImage}
-                    img={"/mint.png"}
-                  />
-                </div>
-                <div className="ocean-background cursor-pointer">
-                  <ThumbnailImages
-                    setActiveWatchImage={setActiveWatchImage}
-                    img={"/ocean.png"}
-                  />
-                </div>
+          <div className="grid grid-cols-[1fr_1fr] grid-rows-3 items-center pbs-10">
+            <div className="col-start-1 row-start-3">
+              <Arrownavigation />
+            </div>
+            <div className="relative isolate col-start-2 grid grid-cols-3 items-center">
+              <div className="absolute col-start-1 cursor-pointer pt-0 before:absolute before:inset-x-0 before:inset-y-18 before:z-[-1] before:h-20 before:max-h-full before:w-37.5 before:max-w-full before:rounded-xl before:bg-[#42445799] before:content-['']">
+                <ThumbnailImages
+                  setActiveWatchImage={setActiveWatchImage}
+                  img={"/navy.png"}
+                />
+              </div>
+              <div className="absolute col-start-2 cursor-pointer pt-0 before:absolute before:inset-x-0 before:inset-y-18 before:z-[-1] before:h-20 before:max-h-full before:w-37.5 before:max-w-full before:rounded-xl before:bg-[#69ddcc99] before:content-['']">
+                <ThumbnailImages
+                  setActiveWatchImage={setActiveWatchImage}
+                  img={"/mint.png"}
+                />
+              </div>
+              <div className="absolute col-start-3 cursor-pointer pt-0 before:absolute before:inset-x-0 before:inset-y-18 before:z-[-1] before:h-20 before:max-h-full before:w-37.5 before:max-w-full before:rounded-xl before:bg-[#ddf3fd99] before:content-['']">
+                <ThumbnailImages
+                  setActiveWatchImage={setActiveWatchImage}
+                  img={"/ocean.png"}
+                />
               </div>
             </div>
           </div>
